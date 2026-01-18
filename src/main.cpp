@@ -10,8 +10,9 @@ void
 setup ()
 {
   delay (1000);
-  Wire.begin ();
+  Wire.begin (8,9);
   Serial.begin (115200);
+  Serial.println ("Start setup");
 
   if (beginRTC ())
     {
